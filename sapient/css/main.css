@@ -1,0 +1,432 @@
+ 
+   @import url("https://fonts.googleapis.com/css?family=Open+Sans:600");
+   * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+   }
+   html, body {
+    height: 100%;
+    background: #cfcfcf;
+    color: #000;
+    font: 12px/1 'Open Sans', sans-serif;
+  }
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+ 
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+ 
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+} 
+textarea {
+  resize: vertical;
+}
+.hidden,
+[hidden] {
+  display: none !important;
+}
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px; 
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden;
+}
+ .clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+ @media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }  
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+h3{margin: 10px;} 
+h2 {
+  font: 600 20px/1 'Open Sans', sans-serif;
+  /* color: #888; */ color: #000;
+  margin: 20px 0;
+}
+h3 {
+	font: 600 15px/1 'Open Sans', sans-serif;
+	/* color: #333; */color: #000;
+	margin: 10px 0;
+}
+p {
+  font: 12px/1 'Open Sans', sans-serif;
+  /* color: #777; */color: #000;
+}
+a {
+	/* color: #333; */color: #000;
+	text-decoration: none;
+}
+a:hover {text-decoration: underline;}
+/*  custom css   */
+
+.container {
+  width: 99%;
+  max-width: 100%;
+  display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+  /* background: #eee; */
+  overflow: none;
+  justify-content: center;
+}
+.clear {clear: both;}
+.mt-10{margin-top: 10px;}
+.mt-20{margin-top: 20px;}
+.mb-10{margin-bottom:10px;}
+.mb-20{margin-bottom:20px;}
+.ml-10{margin-left: 10px;}
+.ml-20{margin-left: 20px;}
+.ml-0{margin-left: 0px;}
+.mr-0{
+  margin-right: 0;
+}
+.pt-10{padding-top: 10px;}
+.pl-10{padding-left: 10px;}
+.p-10{padding: 10px;}
+.p-bottom-10{padding-bottom: 10px;}
+.p-bottom-20{padding-bottom: 20px;}
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.img-block{ width: 100% !important; background-color:#f2f2f2;}
+
+.col-content {
+  width: 100%;  
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #fff;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  border: solid 1px rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
+  margin-right: -15px;
+  margin-left: -15px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  
+
+}
+ .flexrow {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+   .justify-content-center {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .justify-content-flex-end {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+  .justify-content-space-around {   
+    display: flex;  
+    justify-content:space-around; ;
+  }
+  .justify-content-space-between {  
+    display: flex;   
+    justify-content: space-between !important;
+  }  
+  .align-items{
+    align-items: center;
+  }
+.row-wrap{ display: flex; flex-flow: row wrap;}
+.d-flex{
+  display: flex;
+}
+.align-content-center{ align-content: center;}
+ .text-align-center{ text-align: center;}
+ .text-align-left{ text-align: left;}
+.flex-start{
+  display: flex;
+  align-items: flex-start;
+}
+.flex-end{
+  display: flex;
+  align-items:flex-end;
+}
+.bold{font-weight: bold;}
+.normal-font{font-weight: normal; }
+.list{ margin-left: 14px; padding-left:0px; display: inline-block;}
+.d-block{display: inline-block;}
+.blue-txt{ color: #444f92;}
+.light-blue-txt{color: #3e4991;}
+.dark-green-txt{color:#616d54;}
+.btn{
+  padding: 5px 15px; font-size: 0.90rem; border-radius: 5px; border: 1px solid #f2f2f2;
+
+}
+.p-greeen{
+  background-color: #7cba01;
+}
+.light-green{
+  background-color: #c5e09b;
+}
+.d-block{ display: block;}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.flex-wrap{ flex-wrap: wrap;}
+
+/* [class*="col"] {margin-right: 20px;}
+
+[class*="col-"]:last-child {margin-right: 0;} */
+
+.row{
+  width: 100%;
+  /* margin: auto; */
+  margin: 0px auto 20px;  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-items: center;
+  justify-content: center;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  /* flex-basis: 100%; 
+  flex: 1;*/
+  margin-right: 15px;
+}
+.col-1 {flex: 1;}
+.col-2 {flex: 2;}
+.col-3 {flex: 3;}
+.col-4 {flex: 4;}
+.col-5 {flex: 5;}
+.col-6 {flex: 6;}
+.col-7 {flex: 7;}
+.col-8 {flex: 8;}
+.col-9 {flex: 9;}
+.col-10 {flex: 10;}
+.col-11 {flex: 11;}
+.col-12 {flex: 12;}
+ 
+/**/
+.p-container{
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.m-10{ margin: 10px !important;  box-sizing: border-box;}
+.info {
+  background-color: rgba(34, 139, 34, 0.3);
+  border: solid 1px rgba(34, 139, 34, 0.5);
+  color: rgba(34, 139, 34, 1);
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.img-responsive {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+@media(max-width: 480px){
+  .col-1{
+    flex:100%;  
+      margin-top: 10px;
+  }
+.col-2{
+    flex:100%;     
+      margin-top: 10px;
+  }
+.col-3{
+    flex:100%;    
+    margin-top: 10px;
+    width: 100%;   
+  }
+  .row{    
+    margin-bottom: 0px;
+      
+  }
+  .col-9 {
+    flex:100%;    
+    margin-top: 10px;
+    width: 100%;   
+  }
+
+  .col-content{
+    width: 90%;   
+  }
+} 
+ 
+@media screen and (min-device-width: 481px) and (max-device-width: 768px) { 
+  .row{
+      width: 100%;
+  }
+ 
+  .col-3 {
+    flex: 50%;  
+  } 
+
+.col-9 {
+  width: 50%;
+ }
+}  
+
+@media screen and (min-device-width: 767px) and (max-device-width: 1024px) { 
+  .row{
+      width: 100%;
+  }
+  
+  .col-3 {
+    flex: 50%;   
+  } 
+
+.col-9 {
+  width: 50%;
+ }
+ /* .col-content { margin-bottom: 10px; } */
+}  
+ 
+@media screen and (min-device-width: 1024px) and (max-device-width: 1440px) { 
+  .row{
+      width: 100%;
+  }  
+  .col-3 {
+    flex: 20%;    
+  } 
+ 
+  
+}  
+ 
+
